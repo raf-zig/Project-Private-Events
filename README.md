@@ -1,0 +1,2 @@
+This project primarily involves the use of active record associations to build and maintain, "a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date.
+It is a project in Active Record Associations as part of [The Odin Project's Curriculum](https://www.theodinproject.com/lessons/ruby-on-rails-private-events#solutions).
