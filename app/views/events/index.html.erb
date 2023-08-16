@@ -1,3 +1,14 @@
+<%= button_to 'Log in', new_user_session_path %>
+<%= button_to 'Log out', destroy_user_session_path, method: :delete %>
 <h1>Events</h1>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <a href="/events/<%= event.id %>">
+        <%= event.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
-
+<a href="/events/new"> Create an event </a>
