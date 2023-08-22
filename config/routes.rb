@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  resources :event_attendances
   devise_for :users
   get '/users/:id', to: 'users#show'
 

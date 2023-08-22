@@ -20,7 +20,7 @@ class EventsController < ApplicationController
       redirect_to @event
     else
       flash.now[:notice] = 'Something went wrong'
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
