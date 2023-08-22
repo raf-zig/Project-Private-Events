@@ -9,3 +9,9 @@
     </li>
   <% end %>
 </ul>
+
+<h2>User-attended events</h2>
+<p><%@user.attended_events.each do |event|%>
+   <%= event.title %><br>
+<% end %>
+</p>

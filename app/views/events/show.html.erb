@@ -1,6 +1,9 @@
 <h1>Event`s description</h1>
 <p><%=@event.description %></p>
-
+<p><%@event.attendees.each do |user|%>
+   <%= user.email %><br>
+<% end %>
+</p>
 <%= form_with(url: "/event_attendances/", method: :post) do %>
   <%= hidden_field_tag :id, @event.id %>
   <%= submit_tag ("I want to be a participant of this event") %>
