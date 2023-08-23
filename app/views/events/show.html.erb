@@ -1,5 +1,6 @@
-<h1>Event`s description</h1>
+<h1>Event`s description:</h1>
 <p><%=@event.description %></p>
+<h2>List of attendees:</h2>
 <p><%@event.attendees.each do |user|%>
    <%= user.email %><br>
 <% end %>

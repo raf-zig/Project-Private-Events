@@ -1,8 +1,20 @@
 <%= button_to 'Log in', new_user_session_path %>
 <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
 <h1>Events</h1>
+<h2>Past events:</h2>
 <ul>
-  <% @events.each do |event| %>
+  <% @events.past_events.each do |event| %>
+    <li>
+      <a href="/events/<%= event.id %>">
+        <%= event.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Future events:</h2>
+<ul>
+  <% @events.future_events.each do |event| %>
     <li>
       <a href="/events/<%= event.id %>">
         <%= event.title %>
