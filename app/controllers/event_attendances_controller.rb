@@ -1,4 +1,5 @@
 class EventAttendancesController < ApplicationController
+  before_action :authenticate_user!
   def new
     @event_attendance = EventAttendance.new
   end
