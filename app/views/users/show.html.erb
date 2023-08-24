@@ -26,6 +26,10 @@
 <h2>Future events:</h2>
 <p><%@user.attended_events.future_events.each do |event|%>
   <%= event.title %><br>
+  <%= link_to "Destroy", event_path(event), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %><br>
   <% end %>
 </p>
 
